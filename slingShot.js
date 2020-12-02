@@ -9,7 +9,7 @@ class SlingShot{
         this.sling=Constraint.create(option);
         World.add(world,this.sling);
         console.log(this.sling);
-        this.sling3=loadImage("sprites/sling3.png");
+        this.sling3=loadImage("polygon.png");
 
     }
 
