@@ -8,8 +8,8 @@ class SlingShot{
         }
         this.sling=Constraint.create(option);
         World.add(world,this.sling);
-        console.log(this.sling);
-        this.sling3=loadImage("polygon.png");
+        //console.log(this.sling);
+       // this.sling=loadImage("polygon.png");
 
     }
 
@@ -17,8 +17,10 @@ class SlingShot{
         if(this.sling.bodyA){
         var pointA = this.sling.bodyA.position;
         var pointB = this.sling.pointB;
-        
-        stroke(48,22,8);
+        strokeWeight(3);
+        stroke("white");
+        line (pointA.x,pointA.y,pointB.x,pointB.y);
+       /* stroke(48,22,8);
         if(pointA.x<270){
         strokeWeight(7);
         line (pointA.x-15,pointA.y,pointB.x-20,pointB.y+15);
@@ -32,9 +34,13 @@ class SlingShot{
         line(pointA.x+20,pointA.y+5,pointB.x+30,pointB.y+15);
          image(this.sling3,pointA.x+20,pointA.y-10,15,30);
     }
+    */
 }
 }
     fly(){
         this.sling.bodyA=null;
+    }
+    attach(body){
+        this.sling.bodyA=body;
     }
 }
